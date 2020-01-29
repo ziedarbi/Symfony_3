@@ -19,6 +19,29 @@ class User extends BaseUser
      */
     protected $id;
 
+    /**
+     * @return mixed
+     */
+    public function getAnyatt()
+    {
+        return $this->anyatt;
+    }
+
+    /**
+     * @param mixed $anyatt
+     */
+    public function setAnyatt($anyatt)
+    {
+        $this->anyatt = $anyatt;
+    }
+
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    protected $anyatt;
+
+
     public function __construct()
     {
         parent::__construct();
