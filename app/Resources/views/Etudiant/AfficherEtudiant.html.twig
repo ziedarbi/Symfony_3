@@ -1,0 +1,23 @@
+<h2> liste des etudiants</h2>
+
+<table border="2">
+
+    <tr>
+
+        <th>id</th>
+        <th>nom</th>
+        <th>prenom</th>
+        <th>email</th>
+        <th>telephone</th>
+    </tr>
+
+    {% for e in etudiant %}
+    <tr>
+        <td>{{ e.id }}</td>
+        <td>{{ e.nom }}</td>
+        <td>{{ e.prenom }}</td>
+        <td>{{ e.email }}</td>
+        <td>{{ e.telephone }}</td>
+    </tr>
+    {% endfor %}
+</table>

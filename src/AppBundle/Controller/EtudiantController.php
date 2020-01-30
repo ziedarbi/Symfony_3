@@ -33,4 +33,13 @@ class EtudiantController extends Controller
         return $this->render('Etudiant/AjoutEtudiant.html.twig', array('form' => $form->createView()));
 
     }
+    /**
+     * @Route("/afficheretudiant", name="afficheretudiant")
+     */
+    public function afficherEtudiantAction(){
+
+        $em = $this->getDoctrine()->getManager();
+        $etudiant = $em->getRepository("AppBundle:Etudiant")->findAll();
+        return $this->render('Etudiant/AfficherEtudiant.html.twig', array('etudiant'=>$etudiant));
+    }
 }
